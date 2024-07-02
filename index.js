@@ -4,7 +4,7 @@ const app = expess();
 const timetabledata = require("./timetabledata.json");
 
 //getの処理
-app.get("/", (req, res) => {
+app.get("/get", (req, res) => {
   var data = "";
 
   //クエリで日と時間帯を取得
