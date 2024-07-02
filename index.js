@@ -1,4 +1,4 @@
-2//諸々読み込み
+//諸々読み込み
 const expess = require("express");
 const app = expess();
 const timetabledata = require("./public/data/kitasukematsu.json");
