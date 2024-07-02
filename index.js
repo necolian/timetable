@@ -1,7 +1,8 @@
-//諸々読み込み
+2//諸々読み込み
 const expess = require("express");
 const app = expess();
-const timetabledata = require("./timetabledata.json");
+const timetabledata = require("./public/data/kitasukematsu.json");
+const serverless = require("./public/js/serverless.js");
 
 //getの処理
 app.get("/get", (req, res) => {
@@ -29,6 +30,11 @@ app.get("/get", (req, res) => {
   res.status("200").send(data);
   console.log("sended data.");
 });
+
+//サーバーレス
+exports.handler = async (event, context) => {
+  return await serverless.handler(event, context);
+};
 
 //サーバーの処理
 app.listen(3000, () => {
