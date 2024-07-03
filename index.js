@@ -1,7 +1,6 @@
 //諸々読み込み
 const expess = require("express");
 const app = expess();
-const serverless = require("./public/js/serverless.js");
 
 //getの処理
 app.get("/get", (req, res) => {
