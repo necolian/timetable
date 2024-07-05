@@ -3,7 +3,7 @@ const expess = require("express");
 const app = expess();
 
 //getの処理
-app.get("/get", (req, res) => {
+app.get("../get", (req, res) => {
   var data = "";
   var timetable = "";
 
@@ -13,7 +13,7 @@ app.get("/get", (req, res) => {
   if (query) {
     if ("sta" in query) {
       try {
-        timetable = require("./public/data/" + query.sta + ".json");
+        timetable = require("../public/data/" + query.sta + ".json");
         // myModule をここで使用
       } catch (error) {
         res.status("400").send({"code":400,"message":"その駅のデータは存在しません"});
