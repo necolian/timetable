@@ -1,6 +1,6 @@
 //諸々読み込み
-const expess = require("express");
-const app = expess();
+const express = require("express");
+const app = express();
 
 app.get("/",(req,res) => {
   res.status(200).send({"code":200,"name":"necolian-timetable-api","version":"1.0.0","author":"necolian","hint":"データを取得するには、/getにアクセスしてください"});
